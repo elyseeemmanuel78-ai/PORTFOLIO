@@ -1,0 +1,78 @@
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef; /* Le bleu néon */
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 0;
+    height: 100vh;
+}
+
+.text-neon {
+    color: var(--main-color);
+}
+
+/* Le bouton avec l'effet de lueur */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* L'image avec la forme hexagonale (simplifiée avec clip-path) */
+.home-img .hexagon {
+    width: 400px;
+    height: 400px;
+    background: var(--main-color);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.home-img img {
+    width: 95%; /* Pour laisser voir le bord néon */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background: var(--bg-color);
+}
+.home-img .hexagon {
+    width: 460px; /* Ajuste la taille selon tes besoins */
+    height: 450px;
+    background: #0ef; /* La couleur néon */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 50px #0ef; /* L'effet de halo lumineux */
+}
+
+.home-img img {
+    width: 96%; /* Laisse une petite bordure pour voir le néon derrière */
+    height: 96%;
+    object-fit: cover; /* Important : pour que ta photo ne soit pas écrasée */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
